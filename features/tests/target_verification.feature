@@ -5,7 +5,7 @@ Feature: Verification scenarios for Target.com
   Scenario: User can see empty cart message
     Given Open Target.com
     When  Click on Cart icon
-    Then  Verify "Your cart is empty" message is displayed
+    Then  Verify Your cart is empty message is displayed
 
 
   Scenario: Logged out user can access Sign In

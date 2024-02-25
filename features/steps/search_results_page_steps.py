@@ -1,7 +1,12 @@
-from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 
-SEARCH_RESULTS_HEADER = (By.XPATH, "//div[@data-test='resultsHeading']")
+# SEARCH_RESULTS_HEADER = (By.XPATH, "//div[@data-test='resultsHeading']")
+
+
+@when('Click on Add to cart button')
+def click_add_to_cart(context):
+    context.app.search_results_page.click_add_to_cart()
 
 
 @then('Verify search results for {expected_result} are shown')

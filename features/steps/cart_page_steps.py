@@ -11,3 +11,7 @@ def verify_cart_empty(context, expected_msg):
     # actual_text = context.driver.find_element(*CART_EMPTY_MSG").text
     # assert 'Your cart is empty' == actual_text, f"Expected 'Your cart is empty' but got {actual_text}"
 
+
+@then('Verify cart has correct product')
+def verify_cart_item_correct(context):
+    context.app.cart_page.verify_cart_item_correct()
